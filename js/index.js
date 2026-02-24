@@ -23,3 +23,48 @@ for(var i =0;i< skills.length; i++){
     skillsList.appendChild(skill);
 
 }
+
+
+
+/////////////////////////// Chapter 12   //////////////////////
+
+const messageForm = document.querySelector('form[name="leave_message"]');
+
+messageForm.addEventListener('submit', function(event) {
+event.preventDefault();
+
+  const name = event.target.usersName.value;
+  const email = event.target.usersEmail.value;
+  const message = event.target.usersMessage.value;
+
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Message:', message);
+
+            /* Display */
+  var messageSection = document.getElementById("messages");
+  var messageList = messageSection.querySelector("ul");
+  var newMessage  = document.createElement('li');
+  
+
+   newMessage.innerHTML = `
+      <a href="mailto:${email}">${name}</a>
+      <span>${message}</span>
+    `;
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+
+
+  removeButton.addEventListener("click", function () {
+    var entry = removeButton.parentNode;
+  entry.remove();
+});
+
+newMessage.appendChild(removeButton);
+messageList.appendChild(newMessage);
+
+
+event.target.reset();
+});
