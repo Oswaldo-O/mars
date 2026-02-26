@@ -68,3 +68,36 @@ messageList.appendChild(newMessage);
 
 event.target.reset();
 });
+
+
+/////////////////////////////// Chapter 13 ///////////////////////////////////////////
+
+fetch("https://api.github.com/users/Oswaldo-Criollo/repos", {
+  method: "GET"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json(); 
+  })
+  .then(data => (console.log(data), data)) // check data and return
+  .then(function(data) {
+    var repositories = data;
+    console.log("Repositories:", repositories);
+
+    var projectSection = document.getElementById("projects");
+    var projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      var project = document.createElement("li");
+      project.innerText = repositories[i].name; 
+      projectList.appendChild(project); 
+    }
+  })
+
+  .catch(error => {
+    console.error('Check connection an error occurred :', error);
+  });
+  
+
