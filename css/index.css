@@ -3,20 +3,20 @@ body{
     margin: 0;
     font-family: 'Roboto';
     font-weight: 400;   
-    background: white; 
     color: #700748;
     width: auto;
 }       
 
 
 h1 {            
-    background: #72cddb;
+   
     margin: 0 auto;
     text-align: center;
     font-style: italic;
     padding: 2px;
     color: white;
     font-size: 5rem;
+    width: auto;
 }
 
 header {
@@ -24,13 +24,14 @@ header {
     font-style: italic;
     position: sticky;
     top: 0;
-    background: rgb(14, 172, 124);
     color: rgb(23, 73, 180);
 
     display: flex;
     align-items: center;
-    height: 15rem;
+    height: 20rem;
+    width: auto;
 }
+
 
 section {
   scroll-margin-top: 15rem; /* coincide con la altura del header */
@@ -46,7 +47,6 @@ section {
 /***************************    about  ********************************/
 /**********************************************************************/
 #about  {
-    background: rgb(240, 255, 37);
     padding: 5px;
     margin: 0 auto;
     text-align: center;
@@ -70,12 +70,14 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem; 
+    
 }
 
 #skills h2{
     text-align: center;
     font-size: 3.5rem;
     font-weight: bold;
+    
 }
 
 #skills li{
@@ -83,6 +85,30 @@ section {
     margin: 5px;
 }
 
+
+
+
+
+
+/**********************************************************************/
+/***************************    Projects  ******************************/
+/**********************************************************************/
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; 
+}
+
+#projects h2{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+#projects li{
+    font-size: 2.7rem;
+    margin: 5px;
+}
 
 /**********************************************************************/
 /***************************    experience  ***************************/
@@ -221,16 +247,6 @@ button {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /**********************************************************************/
 /***************  link socio media part of connect ********************/
 /**********************************************************************/
@@ -286,8 +302,11 @@ button {
         font-size: 1.5rem;
         font-style:normal;
         background: #939609;
-        color: #500e9b;
+        height: 12rem;
+        
     }
+
+
 
 #about  {
     background: rgb(186, 194, 71);
@@ -326,6 +345,13 @@ button {
 }
 
 
+#projects h2{
+    font-size: 2rem;
+}
+
+#projects li{
+    font-size: 1.2rem;
+}
 
   input,
   textarea,
@@ -333,8 +359,6 @@ button {
     width: 100%;
     font-size: rem;
   }
-
-
 
 
  }
@@ -355,7 +379,9 @@ button {
  header {
         font-size: 2rem;
         background: #6293dd;
-    
+        height: 15rem;
+        color: #500e9b;
+         
     }
 
 #about  {
@@ -396,6 +422,16 @@ button {
     margin: 5px;
 }
 
+#projects h2{
+    font-size: 2.5rem;
+}
+
+#projects li{
+    font-size: 1.7rem;
+    margin: 5px;
+}
+
+
  }
 
 
@@ -411,7 +447,10 @@ button {
     }
 
  header {
+        font-size: 2.5rem;
         background: #97b9eb;
+        height: 19rem;
+        color: #500e9b;
     
     }
 
@@ -448,6 +487,15 @@ button {
 }
 
 #skills li{
+    font-size: 2.2rem;
+    margin: 5px;
+}
+
+#projects h2{
+    font-size: 3rem;
+}
+
+#projects li{
     font-size: 2.2rem;
     margin: 5px;
 }
