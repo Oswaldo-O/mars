@@ -72,7 +72,7 @@ event.target.reset();
 
 /////////////////////////////// Chapter 13 ///////////////////////////////////////////
 
-fetch("https://api.github.com/users/Oswaldo-Criollo/repos", {
+fetch("https://api.github.com/users/Oswaldo-O/repos", {
   method: "GET"
 })
   .then(response => {
